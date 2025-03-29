@@ -1,22 +1,3 @@
-/*
-	Tell us about your project below!👇
-
-  I used a weather API because I've always wanted to make my own simple
-  weather app but I didn't really understand how to do it or what an API even was.
-  I chose this specific weather API because the data given back was simple and straightforward.
-  I interacted with the API using the HTTP client Axios. After getting the city
-  name input by the user, I appended it to the link and picked out the data that I
-  was interested in in the response.
-  The project asks the user for a city name, and, if valid/found, shows the user
-  the city's current temperature, condition, and wind speed. I also included a unit
-  conversion toggler, which takes the data and converts it back and forth from C/kmh
-  to F/mph.
-  If I were to keep coding this project, I might add a 3-day weather forecast or maybe
-  just make it more visually appealing by adding animations or changing the background
-  of the app based on the current condition.
-
-*/
-
 // default temperature unit
 let currentUnit = "C";
 document.getElementById("celsius").classList.add("selected");
@@ -41,7 +22,7 @@ function getWeather() {
     axios
         .get("https://goweather.herokuapp.com/weather/" + city)
         .then((response) => {
-            let temperature = response.data.temperature;
+            let temperature = response.data.temperature.replace("+", "");
             let condition = response.data.description;
             let wind = response.data.wind;
 
@@ -69,6 +50,7 @@ function getWeather() {
             }
         })
         .catch((error) => {
+            document.getElementById("weather-info").style.display = "none";
             document.getElementById("error").style.display = "block";
             setWeather("", "", "", "", "");
             console.log(

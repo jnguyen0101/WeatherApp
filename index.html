@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Weather App</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="weather-app">
+  <h1>Weather App</h1>
+  <div id="unit-toggle">
+    <button id="celsius" onclick="toggleUnits('C')">°C</button>
+    <button id="fahrenheit" onclick="toggleUnits('F')">°F</button>
+  </div>
+  <input type="text" id="city" placeholder="Enter city name" />
+  <button id="get-weather" onclick="getWeather()">Get Weather</button>
+  <p id="error">Error: Failed to Fetch Data</p>
+  <div id="weather-info">
+    <p id="info"></p>
+    <h2 id="city-name"></h2>
+    <p id="temperature"></p>
+    <p id="condition"></p>
+    <p id="wind"></p>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

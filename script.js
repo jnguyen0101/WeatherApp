@@ -8,7 +8,7 @@ document.getElementById("celsius").classList.add("selected");
  */
 function getWeather() {
     // get user input city
-    let city = document.getElementById("city").value;
+    let city = document.getElementById("city").value.toLowerCase();
     city = capitalizeWords(city);
     document.getElementById("error").style.display = "none";
 

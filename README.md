@@ -1,6 +1,8 @@
 # Weather App
 A simple weather app that allows you to check current weather conditions for any city. It fetches real-time weather data, including temperature, general weather conditions, and wind speed.
 
+Live here: https://jnguyen0101.github.io/WeatherApp/
+
 ## Features
 - Search for weather information by city.
 - Displays:

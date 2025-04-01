@@ -59,6 +59,7 @@ function getWeather() {
                 "]."
             );
         });
+    document.getElementById("city").value = "";
 }
 
 /**

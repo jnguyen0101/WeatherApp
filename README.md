@@ -7,6 +7,7 @@ A simple weather app that allows you to check current weather conditions for any
   - Current temperature
   - Weather conditions (e.g., sunny, rainy, cloudy)
   - Wind speed
+- A button toggler to view information in either °C/kmh or °F/mph.
 - Simple and intuitive user interface.
 
 ## Technologies Used
